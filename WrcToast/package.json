@@ -1,0 +1,15 @@
+{
+    "name": "WrcToast",
+    "version": "1.0.0",
+    "description": "toast",
+    "main": "",
+    "scripts": {},
+    "author": "baidu.inc",
+    "license": "ISC",
+    "dependencies": {
+    },
+    "ownModuleDependencies": {
+        "WrcLayer" : "*"
+    },
+    "ownModuleDownLoadPath": "./compoents/tools"
+}

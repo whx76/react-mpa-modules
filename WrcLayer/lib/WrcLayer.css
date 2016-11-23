@@ -1,0 +1,157 @@
+.olay {
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.75);
+    -webkit-transition: opacity 300ms;
+            transition: opacity 300ms;
+}
+.olay .layer {
+    visibility: hidden;
+}
+.olay.loading {
+    background: rgba(0, 0, 0, 0);
+}
+.olay > div {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+.olay.alert > div {
+    background-color: #fff;
+    left: 0;
+    width: auto;
+    height: auto;
+    top: 50%;
+    margin: 0 56px;
+    border-radius: 2px;
+    padding-top: 21px;
+}
+.olay .close-icon {
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    /*background: url(guanbi.png);*/
+    background-size: contain;
+}
+.olay.alert .head {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    line-height: 20px;
+}
+.olay.alert .body {
+    padding: 12px 20px 3px;
+}
+.olay.alert p {
+    line-height: 22px;
+    font-size: 18px;
+    color: #222;
+    text-align: center;
+}
+.olay.alert .btn-group {
+    border-top: 1px solid #d9dfe8;
+}
+.olay .layer .layer-btn {
+    display: none;
+    float: right;
+    margin-right: 1px;
+    font-size: 13px;
+    color: #fff;
+}
+.olay .btn-group > .layer-btn {
+    display: table-cell;
+    width: 1000px;
+    text-align: center;
+}
+.olay.alert .layer .layer-btn {
+    margin: 0;
+    float: inherit;
+    height: 44px;
+    line-height: 44px;
+    font-size: 18px;
+    color: #6492E3;
+}
+.olay.alert .btn-group .layer-btn:nth-child(2) {
+    border-left: 1px solid #d9dfe8;
+}
+.olay.alert .layer .layer-btn.sure {
+    color: #222;
+}
+.loading-animation {
+    width: 20px;
+    height: 20px;
+    background: url(img/loading.png) no-repeat 0 0;
+    background-size: contain;
+    -webkit-animation: loading-keyframe 1s infinite linear;
+            animation: loading-keyframe 1s infinite linear;
+    margin-left: 16px;
+    margin-top: 12px;
+    float: left;
+}
+.loading .layer {
+    left: 50% !important;
+    margin-left: -70px !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    width: 140px !important;
+    height: 44px !important;
+    padding: 0 !important;
+    border-radius: 3px !important;
+    overflow: hidden;
+}
+.olay.alert.loading p {
+    font-size: 16px;
+    color: #fff;
+    float: left;
+    margin-left: 2px;
+    line-height: 44px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.loading .header {
+    display: none !important;
+}
+@-webkit-keyframes loading-keyframe {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes loading-keyframe {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.toast {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    margin-left: -135px;
+    z-index: 9999;
+    width: 270px;
+    padding: 1px 15px;
+    background: #000;
+    opacity: 7;
+    border-radius: 1px;
+}
+.toast p {
+    text-align: center;
+    font-size: 14px;
+    color: #f2f2f2;
+    line-height: 24px;
+}
+

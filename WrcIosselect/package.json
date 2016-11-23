@@ -1,0 +1,17 @@
+{
+  "name": "WrcIosselect",
+  "version": "1.0.0",
+  "description": "iosselect",
+  "main": "",
+  "scripts": {
+  },
+  "author": "baidu.inc",
+  "license": "ISC",
+  "dependencies": {
+    
+  },
+  "ownModuleDependencies": {
+      "WrcIscroll5" : "*"
+  },
+  "ownModuleDownLoadPath": "./compoents/tools"
+}
