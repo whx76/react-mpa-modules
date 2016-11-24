@@ -1,4 +1,32 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: WrcIosselect/lib/WrcIosselect.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: WrcIosselect/lib/WrcIosselect.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * @file
  * @author
  * baidu.inc
@@ -41,7 +69,7 @@ function Layer(html, opts) {
 	this.opts = opts;
 	var el = document.createElement('div');
 	el.className = 'olay';
-	// var layer_el = $('<div class="layer"></div>');
+	// var layer_el = $('&lt;div class="layer">&lt;/div>');
 	var layer_el = document.createElement('div');
 	layer_el.className = 'layer';
 	this.el = el;
@@ -51,7 +79,7 @@ function Layer(html, opts) {
 Layer.prototype = {
 	init: function() {
 		this.layer_el.innerHTML = this.html;
-		if (this.opts.container && document.querySelector(this.opts.container)) {
+		if (this.opts.container &amp;&amp; document.querySelector(this.opts.container)) {
 			document.querySelector(this.opts.container).appendChild(this.el);
 		}
 		else {
@@ -68,12 +96,12 @@ Layer.prototype = {
 		var sureDom = this.el.querySelectorAll('.sure');
 		var closeDom = this.el.querySelectorAll('.close');
 		var self = this;
-		for (var i = 0, len = sureDom.length; i < len; i++) {
+		for (var i = 0, len = sureDom.length; i &lt; len; i++) {
 			sureDom[i].addEventListener('click', function(e) {
 				self.close();
 			});
 		}
-		for (var i = 0, len = closeDom.length; i < len; i++) {
+		for (var i = 0, len = closeDom.length; i &lt; len; i++) {
 			closeDom[i].addEventListener('click', function(e) {
 				self.close();
 			});
@@ -118,7 +146,7 @@ function IosSelect(level, data, options) {
 	this.options.twoThreeRelation = this.options.relation[1];
 	this.options.threeFourRelation = this.options.relation[2];
 	this.options.fourFiveRelation = this.options.relation[3];
-	if (this.options.cssUnit !== 'px' && this.options.cssUnit !== 'rem') {
+	if (this.options.cssUnit !== 'px' &amp;&amp; this.options.cssUnit !== 'rem') {
 		this.options.cssUnit = 'px';
 	}
 	this.setBase();
@@ -139,38 +167,38 @@ IosSelect.prototype = {
 	initLayer: function() {
 		var self = this;
 		var all_html = [
-			'<header style="height: ' + this.options.headerHeight + this.options.cssUnit + '; line-height: ' + this.options.headerHeight + this.options.cssUnit + '" class="iosselect-header">',
-				'<h2 id="iosSelectTitle"></h2>',
-				'<a style="height: ' + this.options.headerHeight + this.options.cssUnit + '; line-height: ' + this.options.headerHeight + this.options.cssUnit + '" href="javascript:void(0)" class="close">取消</a>',
-				'<a style="height: ' + this.options.headerHeight + this.options.cssUnit + '; line-height: ' + this.options.headerHeight + this.options.cssUnit + '" href="javascript:void(0)" class="sure">确定</a>',
-			'</header>',
-			'<section class="iosselect-box">',
-				'<div class="one-level-contain" id="oneLevelContain">',
-					'<ul class="select-one-level">',
-					'</ul>',
-				'</div>',
-				'<div class="two-level-contain" id="twoLevelContain">',
-					'<ul class="select-two-level">',
-					'</ul>',
-				'</div>',
-				'<div class="three-level-contain" id="threeLevelContain">',
-					'<ul class="select-three-level">',
-					'</ul>',
-				'</div>',
-				'<div class="four-level-contain" id="fourLevelContain">',
-					'<ul class="select-four-level">',
-					'</ul>',
-				'</div>',
-				'<div class="five-level-contain" id="fiveLevelContain">',
-					'<ul class="select-five-level">',
-					'</ul>',
-				'</div>',
-			'</section>',
-			'<hr class="cover-area1"/>',
-			'<hr class="cover-area2"/>',
-			'<div class="ios-select-loading-box" id="iosSelectLoadingBox">',
-			    '<div class="ios-select-loading"></div>',
-			'</div>'
+			'&lt;header style="height: ' + this.options.headerHeight + this.options.cssUnit + '; line-height: ' + this.options.headerHeight + this.options.cssUnit + '" class="iosselect-header">',
+				'&lt;h2 id="iosSelectTitle">&lt;/h2>',
+				'&lt;a style="height: ' + this.options.headerHeight + this.options.cssUnit + '; line-height: ' + this.options.headerHeight + this.options.cssUnit + '" href="javascript:void(0)" class="close">取消&lt;/a>',
+				'&lt;a style="height: ' + this.options.headerHeight + this.options.cssUnit + '; line-height: ' + this.options.headerHeight + this.options.cssUnit + '" href="javascript:void(0)" class="sure">确定&lt;/a>',
+			'&lt;/header>',
+			'&lt;section class="iosselect-box">',
+				'&lt;div class="one-level-contain" id="oneLevelContain">',
+					'&lt;ul class="select-one-level">',
+					'&lt;/ul>',
+				'&lt;/div>',
+				'&lt;div class="two-level-contain" id="twoLevelContain">',
+					'&lt;ul class="select-two-level">',
+					'&lt;/ul>',
+				'&lt;/div>',
+				'&lt;div class="three-level-contain" id="threeLevelContain">',
+					'&lt;ul class="select-three-level">',
+					'&lt;/ul>',
+				'&lt;/div>',
+				'&lt;div class="four-level-contain" id="fourLevelContain">',
+					'&lt;ul class="select-four-level">',
+					'&lt;/ul>',
+				'&lt;/div>',
+				'&lt;div class="five-level-contain" id="fiveLevelContain">',
+					'&lt;ul class="select-five-level">',
+					'&lt;/ul>',
+				'&lt;/div>',
+			'&lt;/section>',
+			'&lt;hr class="cover-area1"/>',
+			'&lt;hr class="cover-area2"/>',
+			'&lt;div class="ios-select-loading-box" id="iosSelectLoadingBox">',
+			    '&lt;div class="ios-select-loading">&lt;/div>',
+			'&lt;/div>'
 		].join('\r\n');
 		this.iosSelectLayer = new Layer(all_html, {
 			className: 'ios-select-widget-box ' + this.typeBox + (this.options.addClassName? ' ' + this.options.addClassName: ''),
@@ -183,7 +211,7 @@ IosSelect.prototype = {
 			this.iosSelectTitleDom.innerHTML = this.options.title;
 		}
 
-		if (this.options.headerHeight && this.options.itemHeight) {
+		if (this.options.headerHeight &amp;&amp; this.options.itemHeight) {
 			this.coverArea1Dom = document.querySelector('.cover-area1');
 			this.coverArea1Dom.style.top = this.options.headerHeight + this.options.itemHeight * 3 + this.options.cssUnit;
 
@@ -283,7 +311,7 @@ IosSelect.prototype = {
 
 			self.selectOneObj = iosSelectUtil.attrToData(pdom, plast);
 
-			if (self.level > 1 && self.options.oneTwoRelation === 1) {
+			if (self.level > 1 &amp;&amp; self.options.oneTwoRelation === 1) {
 				self.setTwoLevel(self.selectOneObj.id, self.selectTwoObj.id, self.selectThreeObj.id, self.selectFourObj.id, self.selectFiveObj.id);
 			}
 		});
@@ -362,7 +390,7 @@ IosSelect.prototype = {
 
 				self.selectTwoObj = iosSelectUtil.attrToData(cdom, plast);
 
-				if (self.level > 2 && self.options.twoThreeRelation === 1) {
+				if (self.level > 2 &amp;&amp; self.options.twoThreeRelation === 1) {
 					self.setThreeLevel(self.selectOneObj.id, self.selectTwoObj.id, self.selectThreeObj.id, self.selectFourObj.id, self.selectFiveObj.id);
 				}
 			});
@@ -441,7 +469,7 @@ IosSelect.prototype = {
 				self.threeLevelContainDom.querySelector('li:nth-child(' + (plast + 5) + ')').classList.add('side2');
 
 				self.selectThreeObj = iosSelectUtil.attrToData(ddom, plast);
-				if (self.level >= 4 && self.options.threeFourRelation === 1) {
+				if (self.level >= 4 &amp;&amp; self.options.threeFourRelation === 1) {
 					self.setFourLevel(self.selectOneObj.id, self.selectTwoObj.id, self.selectThreeObj.id, self.selectFourObj.id, self.selectFiveObj.id);
 				}
 			});
@@ -521,7 +549,7 @@ IosSelect.prototype = {
 
 				self.selectFourObj = iosSelectUtil.attrToData(ddom, plast);
 
-				if (self.level >= 5 && self.options.fourFiveRelation === 1) {
+				if (self.level >= 5 &amp;&amp; self.options.fourFiveRelation === 1) {
 					self.setFiveLevel(self.selectOneObj.id, self.selectTwoObj.id, self.selectThreeObj.id, self.selectFourObj.id, self.selectFiveObj.id);
 				}
 			});
@@ -618,11 +646,11 @@ IosSelect.prototype = {
 				document.body.classList.remove('ios-select-body-class');
 			}
 			window.scrollTo(0, self.offsetTop);
-			self.callback && self.callback(self.selectOneObj, self.selectTwoObj, self.selectThreeObj, self.selectFourObj, self.selectFiveObj);
+			self.callback &amp;&amp; self.callback(self.selectOneObj, self.selectTwoObj, self.selectThreeObj, self.selectFourObj, self.selectFiveObj);
 		});
 	},
 	loadingShow: function() {
-		this.options.showLoading && (this.iosSelectLoadingBoxDom.style.display = 'block');
+		this.options.showLoading &amp;&amp; (this.iosSelectLoadingBoxDom.style.display = 'block');
 	},
 	loadingHide: function() {
 		this.iosSelectLoadingBoxDom.style.display = 'none';
@@ -656,20 +684,20 @@ IosSelect.prototype = {
 		var oneHtml = '';
 		var self = this;
 		var atIndex = 0;
-		oneHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
-		oneHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
-		oneHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
+		oneHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
+		oneHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
+		oneHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
 		oneLevelData.forEach(function(v, i, o) {
 			if (v.id == oneLevelId) {
-				oneHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';" ' + iosSelectUtil.attrToHtml(v) + ' class="at">' + v.value + '</li>';
+				oneHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';" ' + iosSelectUtil.attrToHtml(v) + ' class="at">' + v.value + '&lt;/li>';
 				atIndex = i + 1 + 3;
 			} else {
-				oneHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + '>' + v.value + '</li>';
+				oneHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + '>' + v.value + '&lt;/li>';
 			}
 		}.bind(this));
-		oneHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
-		oneHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
-		oneHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
+		oneHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
+		oneHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
+		oneHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
 		this.oneLevelUlContainDom.innerHTML = oneHtml;
 
 		this.scrollOne.refresh();
@@ -725,20 +753,20 @@ IosSelect.prototype = {
 		}
 		var twoHtml = '';
 		var self = this;
-		twoHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
-		twoHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
-		twoHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
+		twoHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
+		twoHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
+		twoHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
 		twoLevelData.forEach(function(v, i, o) {
 			if (v.id == twoLevelId) {
-				twoHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + ' class="at">' + v.value + '</li>';
+				twoHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + ' class="at">' + v.value + '&lt;/li>';
 				atIndex = i + 1 + 3;
 			} else {
-				twoHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + '>' + v.value + '</li>';
+				twoHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + '>' + v.value + '&lt;/li>';
 			}
 		}.bind(this));
-		twoHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
-		twoHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
-		twoHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"></li>';
+		twoHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
+		twoHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
+		twoHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';">&lt;/li>';
 		this.twoLevelUlContainDom.innerHTML = twoHtml;
 		this.scrollTwo.refresh();
 		this.scrollTwo.scrollToElement(':nth-child(' + (atIndex - 3) + ')', 0);
@@ -794,20 +822,20 @@ IosSelect.prototype = {
 		}
 		var threeHtml = '';
 		var self = this;
-		threeHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		threeHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		threeHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
+		threeHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		threeHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		threeHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
 		threeLevelData.forEach(function(v, i, o) {
 			if (v.id == threeLevelId) {
-				threeHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + ' class="at">' + v.value + '</li>';
+				threeHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + ' class="at">' + v.value + '&lt;/li>';
 				atIndex = i + 1 + 3;
 			} else {
-				threeHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + '>' + v.value + '</li>';
+				threeHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + '>' + v.value + '&lt;/li>';
 			}
 		}.bind(this));
-		threeHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		threeHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		threeHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
+		threeHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		threeHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		threeHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
 		this.threeLevelUlContainDom.innerHTML = threeHtml;
 		this.scrollThree.refresh();
 		this.scrollThree.scrollToElement(':nth-child(' + (atIndex - 3) + ')', 0);
@@ -864,20 +892,20 @@ IosSelect.prototype = {
 		}
 		var fourHtml = '';
 		var self = this;
-		fourHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		fourHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		fourHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
+		fourHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		fourHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		fourHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
 		fourLevelData.forEach(function(v, i, o) {
 			if (v.id == fourLevelId) {
-				fourHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + ' class="at">' + v.value + '</li>';
+				fourHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + ' class="at">' + v.value + '&lt;/li>';
 				atIndex = i + 1 + 3;
 			} else {
-				fourHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + '>' + v.value + '</li>';
+				fourHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + '>' + v.value + '&lt;/li>';
 			}
 		}.bind(this));
-		fourHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		fourHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		fourHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
+		fourHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		fourHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		fourHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
 		this.fourLevelUlContainDom.innerHTML = fourHtml;
 		this.scrollFour.refresh();
 		this.scrollFour.scrollToElement(':nth-child(' + (atIndex - 3) + ')', 0);
@@ -934,20 +962,20 @@ IosSelect.prototype = {
 		}
 		var fiveHtml = '';
 		var self = this;
-		fiveHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		fiveHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		fiveHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
+		fiveHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		fiveHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		fiveHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
 		fiveLevelData.forEach(function(v, i, o) {
 			if (v.id == fiveLevelId) {
-				fiveHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + ' class="at">' + v.value + '</li>';
+				fiveHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + ' class="at">' + v.value + '&lt;/li>';
 				atIndex = i + 1 + 3;
 			} else {
-				fiveHtml += '<li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + '>' + v.value + '</li>';
+				fiveHtml += '&lt;li style="height: ' + this.options.itemHeight + this.options.cssUnit + '; line-height: ' + this.options.itemHeight + this.options.cssUnit +';"' + iosSelectUtil.attrToHtml(v) + '>' + v.value + '&lt;/li>';
 			}
 		}.bind(this));
-		fiveHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		fiveHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
-		fiveHtml += '<li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '"></li>';
+		fiveHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		fiveHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
+		fiveHtml += '&lt;li style="height: ' + this.options.itemHeight +this.options.cssUnit +  '; line-height: ' + this.options.itemHeight +this.options.cssUnit + '">&lt;/li>';
 		this.fiveLevelUlContainDom.innerHTML = fiveHtml;
 		this.scrollFive.refresh();
 		this.scrollFive.scrollToElement(':nth-child(' + (atIndex - 3) + ')', 0);
@@ -1002,4 +1030,26 @@ IosSelect.prototype = {
  * @param {string=} options.fiveLevelId 第五级选中id
  * @param {boolean=} options.showLoading 如果你的数据是异步加载的，可以使用该参数设置为true，下拉菜单会有加载中的效果
  */
-export default IosSelect;
+export default IosSelect;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-WrcIosselect.html">WrcIosselect</a></li><li><a href="module-WrcLayer.html">WrcLayer</a></li><li><a href="module-WrcToast.html">WrcToast</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Nov 24 2016 18:18:30 GMT+0800 (中国标准时间)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

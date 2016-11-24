@@ -1,4 +1,32 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: WrcLayer/lib/WrcLayer.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: WrcLayer/lib/WrcLayer.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * @file
  * @author
  * baidu.inc
@@ -16,15 +44,15 @@ var OlayComponent = React.createClass({
 	handleClick: function(evt) {
 		var target = evt.target;
 		if (target.classList.contains('sure')) {
-			this.props.closeLayer && this.props.closeLayer();
-			this.props.surefun && this.props.surefun();
+			this.props.closeLayer &amp;&amp; this.props.closeLayer();
+			this.props.surefun &amp;&amp; this.props.surefun();
 		}
 		else if (target.classList.contains('cancel')) {
-			this.props.closeLayer && this.props.closeLayer();
-			this.props.cancelfun && this.props.cancelfun();
+			this.props.closeLayer &amp;&amp; this.props.closeLayer();
+			this.props.cancelfun &amp;&amp; this.props.cancelfun();
 		}
 		else if (target.classList.contains('close')) {
-			this.props.closeLayer && this.props.closeLayer();
+			this.props.closeLayer &amp;&amp; this.props.closeLayer();
 		}
 	},
     render: function() {
@@ -40,9 +68,9 @@ var OlayComponent = React.createClass({
     		className += ' ' + this.props.addClassname
     	}
         return (
-            <div className={className} style={{height: height}} onClick={this.handleClick}>
-                <LayerComponent {...this.props} type={this.props.type}/>
-			</div>
+            &lt;div className={className} style={{height: height}} onClick={this.handleClick}>
+                &lt;LayerComponent {...this.props} type={this.props.type}/>
+			&lt;/div>
         );
     }
 });
@@ -60,21 +88,21 @@ var LayerComponent = React.createClass({
     render: function() {
     	if (this.props.type === 'loading') {
     		return (
-	            <div className="layer" ref="layer">
-	                <LoadingIconComponent/>
-	                <LoadingTxtComponent/>
-	            </div>
+	            &lt;div className="layer" ref="layer">
+	                &lt;LoadingIconComponent/>
+	                &lt;LoadingTxtComponent/>
+	            &lt;/div>
 	        );
     	}
         else {
         	return (
-    			<div className="layer" ref="layer">
+    			&lt;div className="layer" ref="layer">
 	    		{
 	    			React.Children.map(this.props.children, function (child) {
 	                    return child;
 	                })
 	    		}
-	    		</div>
+	    		&lt;/div>
     		);
         }
     }
@@ -82,31 +110,31 @@ var LayerComponent = React.createClass({
 var LoadingIconComponent = React.createClass({
 	render: function() {
         return (
-            <div className="loading-animation"></div>
+            &lt;div className="loading-animation">&lt;/div>
         );
     }
 });
 var LoadingTxtComponent = React.createClass({
 	render: function() {
         return (
-            <p>正在加载...</p>
+            &lt;p>正在加载...&lt;/p>
         );
     }
 });
 var ToastComponent = React.createClass({
 	componentDidMount: function() {
 		setTimeout(function() {
-			this.props.closeLayer && this.props.closeLayer();
+			this.props.closeLayer &amp;&amp; this.props.closeLayer();
 		}.bind(this), this.props.outTime);
 	},
 	componentWillUnmount: function() {
-		this.props.surefun && this.props.surefun();
+		this.props.surefun &amp;&amp; this.props.surefun();
 	},
 	render: function() {
 		return (
-			<div className="toast">
-			    <p>{this.props.toastStr}</p>
-			</div>
+			&lt;div className="toast">
+			    &lt;p>{this.props.toastStr}&lt;/p>
+			&lt;/div>
 		)
 	}
 });
@@ -124,29 +152,29 @@ function Layer(options) {
 	};
 	if (options.type === 'toast') {
 		ReactDOM.render(	
-			<ToastComponent outTime={options.outTime || 2000} toastStr={options.toastStr} closeLayer={closeLayer} surefun={options.sureFun}/>,
+			&lt;ToastComponent outTime={options.outTime || 2000} toastStr={options.toastStr} closeLayer={closeLayer} surefun={options.sureFun}/>,
 			layerRootDom
 		);
 	}
 	else if (options.type === 'loading') {
 		ReactDOM.render (
-		    <OlayComponent type="loading"/>,
+		    &lt;OlayComponent type="loading"/>,
 		    layerRootDom
 		);
 	}
 	else if (options.type === 'alert') {
 		ReactDOM.render (
-		    <OlayComponent type="alert" addClassname={options.addClassname} surefun={options.sureFun} cancelfun={options.cancelFun} rootdom={layerRootDom} closeLayer={closeLayer}>
+		    &lt;OlayComponent type="alert" addClassname={options.addClassname} surefun={options.sureFun} cancelfun={options.cancelFun} rootdom={layerRootDom} closeLayer={closeLayer}>
 		        {options.html}
-		    </OlayComponent>,
+		    &lt;/OlayComponent>,
 		    layerRootDom
 		);
 	}
 	else {
 		ReactDOM.render (
-		    <OlayComponent>
+		    &lt;OlayComponent>
 		        {options.html}
-		    </OlayComponent>,
+		    &lt;/OlayComponent>,
 		    layerRootDom
 		);
 	}
@@ -161,4 +189,26 @@ function Layer(options) {
  * @param {string=} options.addClassname  额外的类名
  * @param {jsx=} options.html  插入的html片段  
  */
-export default Layer;
+export default Layer;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-WrcIosselect.html">WrcIosselect</a></li><li><a href="module-WrcLayer.html">WrcLayer</a></li><li><a href="module-WrcToast.html">WrcToast</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Nov 24 2016 18:18:30 GMT+0800 (中国标准时间)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

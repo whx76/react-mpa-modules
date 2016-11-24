@@ -1,0 +1,15 @@
+{
+	"source": {
+        "include": [ "WrcIosselect/lib", "WrcIScroll5/lib", "WrcLayer/lib", "WrcToast/lib" ],
+        "exclude": [],
+        "includePattern": ".+\\.js(x)?$",
+        "excludePattern": ""
+    },
+    "opts": {
+        "template": "templates/default",  
+        "encoding": "utf8",               
+        "destination": "./docs/"     
+    }
+}
+
+

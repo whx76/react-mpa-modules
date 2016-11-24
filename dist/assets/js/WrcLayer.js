@@ -145,13 +145,8 @@ webpackJsonp([2],[
 	                                                                                                                                                                                                                                                                   * @author
 	                                                                                                                                                                                                                                                                   * baidu.inc
 	                                                                                                                                                                                                                                                                   */
-	/*
-	 * options {object}
-	 * options.type {string} loading alert
-	 * options.cancelFun {function} 取消按钮回调方法
-	 * options.sureFun {function} 确认按钮回调方法
-	 * options.addClassname {string} 额外的类名
-	 * options.html {jsx} 插入的html片段  
+	/**
+	 * @module WrcLayer
 	 */
 
 
@@ -308,6 +303,15 @@ webpackJsonp([2],[
 		}
 		this.closeLayer = closeLayer;
 	}
+	/**
+	 * WrcLayer
+	 * @param {Object} options 
+	 * @param {string} options.type  loading alert
+	 * @param {Function=} options.cancelFun  取消按钮回调方法
+	 * @param {Function=} options.sureFun  确认按钮回调方法
+	 * @param {string=} options.addClassname  额外的类名
+	 * @param {jsx=} options.html  插入的html片段  
+	 */
 	exports.default = Layer;
 
 /***/ },

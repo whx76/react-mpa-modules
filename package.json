@@ -5,7 +5,8 @@
     "main": "webpack.config.js",
     "scripts": {
         "dev": "webpack-dev-server --progress --profile --colors --hot --port 8080",
-        "online": "SET BABEL_ENV=production && webpack --progress --profile --colors --config webpack.online.config.js"
+        "online": "SET BABEL_ENV=production && webpack --progress --profile --colors --config webpack.online.config.js",
+        "jsdoc": "jsdoc -c conf.json"
     },
     "author": "baidu.inc",
     "license": "ISC",
@@ -42,6 +43,7 @@
         "webpack": "^1.13.3",
         "webpack-dev-server": "^1.16.2",
         "webpack-zepto": "0.0.1",
-        "redux": "^3.6.0"
+        "redux": "^3.6.0",
+        "jsdoc": "~3.4.3"
     }
 }

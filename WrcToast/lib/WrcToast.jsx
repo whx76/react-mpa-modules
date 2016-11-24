@@ -1,11 +1,9 @@
 /**
- * @file
- * @author
- * Created by zhousheng on 2016/9/8
+ * @file WrcToast
+ * @author baidu.inc
  */
-/*
- * str {string} toast's text  
- * outTime {number} display time,in milliseconds
+/**
+ * @module WrcToast
  */
 import Layer from '../../WrcLayer/lib/WrcLayer.jsx';
 function toast(str, outTime) {
@@ -16,5 +14,9 @@ function toast(str, outTime) {
 	};
 	new Layer(toastOptions);
 }
-
+/**
+ * WrcToast
+ * @param {string} str toast's text  
+ * @param {number} outTime display time,in milliseconds
+ */
 export default toast;

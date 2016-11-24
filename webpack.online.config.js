@@ -10,6 +10,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 var glob = require('glob');
+var apidoc = require('apidoc');
 
 // 一些路径信息
 var ROOT_PATH = path.resolve(__dirname);

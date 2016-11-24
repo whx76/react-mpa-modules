@@ -92,13 +92,8 @@ webpackJsonp([3],[
 	                                                                                                                                                                                                                                                                   * @author
 	                                                                                                                                                                                                                                                                   * baidu.inc
 	                                                                                                                                                                                                                                                                   */
-	/*
-	 * options {object}
-	 * options.type {string} loading alert
-	 * options.cancelFun {function} 取消按钮回调方法
-	 * options.sureFun {function} 确认按钮回调方法
-	 * options.addClassname {string} 额外的类名
-	 * options.html {jsx} 插入的html片段  
+	/**
+	 * @module WrcLayer
 	 */
 
 
@@ -255,6 +250,15 @@ webpackJsonp([3],[
 		}
 		this.closeLayer = closeLayer;
 	}
+	/**
+	 * WrcLayer
+	 * @param {Object} options 
+	 * @param {string} options.type  loading alert
+	 * @param {Function=} options.cancelFun  取消按钮回调方法
+	 * @param {Function=} options.sureFun  确认按钮回调方法
+	 * @param {string=} options.addClassname  额外的类名
+	 * @param {jsx=} options.html  插入的html片段  
+	 */
 	exports.default = Layer;
 
 /***/ },
@@ -326,14 +330,18 @@ webpackJsonp([3],[
 	    outTime: outTime || 3000
 	  };
 	  new _WrcLayer2.default(toastOptions);
-	} /**
-	   * @file
-	   * @author
-	   * Created by zhousheng on 2016/9/8
-	   */
-	/*
-	 * str {string} toast's text  
-	 * outTime {number} display time,in milliseconds
+	}
+	/**
+	 * WrcToast
+	 * @param {string} str toast's text  
+	 * @param {number} outTime display time,in milliseconds
+	 */
+	/**
+	 * @file WrcToast
+	 * @author baidu.inc
+	 */
+	/**
+	 * @module WrcToast
 	 */
 	exports.default = toast;
 
