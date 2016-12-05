@@ -1,0 +1,29 @@
+exports[`test Layer2 renders loading 1`] = `
+<div>
+  <div>
+    <p>
+      loading
+    </p>
+  </div>
+</div>
+`;
+
+exports[`test Layer2 renders normal 1`] = `
+<div>
+  <div>
+    <p>
+      default
+    </p>
+  </div>
+</div>
+`;
+
+exports[`test Layer2 renders toast 1`] = `
+<div>
+  <div>
+    <p>
+      toast
+    </p>
+  </div>
+</div>
+`;

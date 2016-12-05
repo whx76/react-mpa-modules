@@ -14,7 +14,7 @@ class LayerDemo extends React.Component{
 		setTimeout(function() {
 		    // 关闭loading
 		    lodingLayer.closeLayer();
-		}, 3000);
+		}, 3000000);
 	}
 	handleClick2() {
 		let optionsFloating = {

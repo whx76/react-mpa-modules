@@ -980,7 +980,7 @@ IosSelect.prototype = {
 }
 /**
  * IosSelect
- * @param {number} level 选择的层级 1 2 3 最多支持3层
+ * @param {number} level 选择的层级 1 2 3 4 5 最多支持5层
  * @param {...Array} data [oneLevelArray[, twoLevelArray[, threeLevelArray]]]
  * @param {Object} options
  * @param {string=} options.container 组件插入到该元素下 可选

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: WrcToast/lib/WrcToast.jsx</title>
+    <title>JSDoc: Source: WrcLayer/lib/Layer2.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: WrcToast/lib/WrcToast.jsx</h1>
+    <h1 class="page-title">Source: WrcLayer/lib/Layer2.jsx</h1>
 
     
 
@@ -27,27 +27,48 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @file WrcToast
- * @author baidu.inc
+ * @file
+ * @author
+ * baidu.inc
  */
 /**
- * @module WrcToast
+ * @module Layer
  */
-import Layer from '../../WrcLayer/lib/WrcLayer.jsx';
-function toast(str, outTime) {
-	var toastOptions = {
-	    type: 'toast',
-	    toastStr: str,
-	    outTime: outTime || 3000
-	};
-	new Layer(toastOptions);
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
 /**
- * WrcToast
- * @param {string} str toast's text  
- * @param {number} outTime display time,in milliseconds
+ * Layer
+ * @param {Object} props 
+ * @param {string} props.type  toast loading
  */
-export default toast;</code></pre>
+export default class Layer2 extends React.Component {
+	constructor() {
+		super();
+	}
+	render() {
+		let component;
+		if (this.props.type === 'toast') {
+			component = &lt;div>
+			                &lt;p>toast&lt;/p>
+			            &lt;/div>
+		}
+		else if (this.props.type === 'loading') {
+			component = &lt;div>
+			                &lt;p>loading&lt;/p>
+			            &lt;/div>
+		}
+		else {
+			component = &lt;div>
+			                &lt;p>default&lt;/p>
+			            &lt;/div>
+		}
+		return (
+			&lt;div>
+			    {component}
+			&lt;/div>
+		)
+	}
+}</code></pre>
         </article>
     </section>
 

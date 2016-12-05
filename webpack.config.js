@@ -18,9 +18,7 @@ var REACT = path.resolve(NODE_PATH, 'react/dist/react.js');
 var REACTDOM = path.resolve(NODE_PATH, 'react-dom/dist/react-dom.js');
 
 function getEntries(globPath) {
-    console.log(globPath)
-    console.log(1)
-     var files = glob.sync(globPath),
+    var files = glob.sync(globPath),
         entries = {};
     console.log(files.length)
      files.forEach(function(filepath) {
